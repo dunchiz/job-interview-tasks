@@ -1,0 +1,7 @@
+<button (click)="addTaskEvent($event)">add task</button>
+<div *ngIf="tls != null">
+    <div *ngFor="let tl of tls.slice().reverse()">
+        <app-task-list-item [id]="tl.id" [name]="tl.name" (nameChange)="changeName(tl,$event)" [done]="tl.done"
+            (doneChange)="changeDone(tl,$event)" (deleteTask)="deleteTask(tl)"></app-task-list-item>
+    </div>
+</div>

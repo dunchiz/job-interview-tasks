@@ -1,0 +1,5 @@
+<div id="task_template" class="task_template">
+    <textarea [disabled]="done" (input)="onNameChange($event)" class=" task_ta">{{name}}</textarea>
+    <input type="checkbox" (change)="onDoneChange($event)" [checked]="done" />
+    <button (click)="deleteTaskBtnClick($event)">delete</button>
+</div>
